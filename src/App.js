@@ -17,10 +17,10 @@ class App extends Component {
             Hello {this.state.name.firstName} {this.state.name.lastName}. I work at {this.state.company}
           </p>
           <button onClick={() => {
-            this.setState(
-              { name: { firstName: 'L', lastName: 'B' } 
+            this.setState((state, props) => {
+              return { name: { firstName: 'L', lastName: 'B' } }
             });
-            console.log (this.state);
+            console.log(this.state);
           }}>
             Change Name
           </button>
