@@ -6,7 +6,7 @@ import './App.css';
 class App extends Component {
   constructor (){
     super();
-    this.state = {name:'Yev'};
+    this.state = {name:{firstName: 'Y', lastName:'B'}, company:'Z'};
   }
   render (){
   return (
@@ -14,9 +14,9 @@ class App extends Component {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello {this.state.name}
+          Hello {this.state.name.firstName} {this.state.name.lastName}. I work at {this.state.company}
         </p>
-        <button onClick={()=>{this.setState({name:'Mila'})}}>
+        <button onClick={()=>{this.setState({name:{firstName:'L', lastName:'B'}})}}>
         Change Name
         </button>
           
